@@ -25,7 +25,7 @@ class Util(object):
             pass
         return default
 
-def main(args):
+def testes(args):
     try:
         print ("args", '->', args)
         print ("Testes da classe Util")
@@ -40,5 +40,5 @@ def main(args):
 
 
 if __name__ == '__main__':
-    sys.exit( main( sys.argv ) )
+    sys.exit( testes( sys.argv ) )
     pass
