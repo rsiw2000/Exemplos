@@ -17,6 +17,7 @@ class Util(object):
         qual = "om dia" if iHora < 12 else "oa tarde" if iHora < 18 else "oa noite"
         return "%s%s" % (("B" if first_up else "b"), qual)
              
+    # faz um cast com default, sem gerar erro
     @staticmethod
     def safe_cast(tipo, valor, default=None):
         try:
@@ -25,6 +26,7 @@ class Util(object):
             pass
         return default
 
+# rotinas de teste
 def testes(args):
     try:
         print ("args", '->', args)
@@ -38,7 +40,8 @@ def testes(args):
         sys.exit(1)
     sys.exit(0)
 
-
+# o nome é __main__ sempre que for executado diretamente (ex.  python Utilidades.py)
+# é bom para testes e não interfere quando este módulo for importado a partir de outro
 if __name__ == '__main__':
     sys.exit( testes( sys.argv ) )
     pass
